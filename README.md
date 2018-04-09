@@ -114,6 +114,7 @@ Request:POST
 - [ethers.js](https://github.com/ethers-io/ethers.js/)
 - [boilerplate](https://github.com/developit/express-es6-rest-api)
 - [bitcoinjs](https://github.com/bitcoinjs/bitcoinjs-lib)
+- [btcinfo-node](https://github.com/4N1S/btcinfo-node)
 
 
 
