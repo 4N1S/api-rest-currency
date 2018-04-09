@@ -70,7 +70,7 @@ Request:GET
 **Examples**
 Request:POST
 
-    /api/transaction/{currency}
+    /api/transaction/{currency} 
 
     param:(required object JSON)
     privatkey:privateKey of the source ETH address
@@ -94,10 +94,11 @@ Request:POST
 	},
 	"message":"Wallet Create on currency eth "
 }
-```javasctipt
+```
 
 ***BITCOIN BLOCKCHAIN TRANSACTION 
-```
+```javasctipt
+
 {
 	"status":"success",
 	"data":{
@@ -108,6 +109,7 @@ Request:POST
 	"message":"Transaction Create on currency btc "
 }
 ```
+
 ## Library Reference
 - [ethers.js](https://github.com/ethers-io/ethers.js/)
 - [boilerplate](https://github.com/developit/express-es6-rest-api)
