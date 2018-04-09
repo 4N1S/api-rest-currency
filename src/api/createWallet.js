@@ -2,6 +2,8 @@ import resource from 'resource-router-middleware';
 import ethers from 'ethers';
 import { provider } from '../models/infura-config';
 import bitcoin from 'bitcoinjs-lib';
+import bch from 'bitcoincashjs';
+
 let responseapi;
 
 export default ({ config, db }) => resource({
@@ -46,6 +48,12 @@ export default ({ config, db }) => resource({
 					  	  "message": "Missing parameter: 'currency'"
 						};
 		}
+
+
+		// var litecoin = bitcoin.networks.litecoin
+		// var keyPair = bitcoin.ECPair.makeRandom({ network: litecoin, rng: rng })
+		// var wif = keyPair.toWIF()
+		// var address = keyPair.getAddress()
 		res.json(responseapi);	
 
 	}

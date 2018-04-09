@@ -32,6 +32,7 @@
   "license": "MIT",
   "dependencies": {
     "bitcoin-core": "^2.0.0",
+    "bitcoincashjs": "^0.1.10",
     "bitcoinjs-lib": "^3.3.2",
     "body-parser": "^1.13.3",
     "btcinfo-node": "0.0.1",

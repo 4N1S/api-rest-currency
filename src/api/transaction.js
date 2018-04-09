@@ -57,7 +57,14 @@ export default ({ config, db }) => resource({
 				       			};
 				       res.json(responseapi);
 
-				      });
+				      }).catch((error) => {
+						console.log(error);
+						responseapi={
+									"status": "error",
+								 	"data": null,
+								 	"message": "Aborded server'"
+									};
+					});
 
 				});
 			}else{

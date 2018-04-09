@@ -13,6 +13,7 @@ export default ({ config, db }) => resource({
 		let currency=params.currency,
 			address=params.address;
 		var client = new btcinfo("testnet");
+		var litecoin = new btcinfo("litecoin");
 
 		if(currency=="btc"){
 			// Check length of address 
@@ -45,7 +46,14 @@ export default ({ config, db }) => resource({
 								  "message": "Bad format parameter: 'address'"
 								};
 
-				})
+				}).catch((error) => {
+					console.log(error);
+					responseapi={
+								  "status": "Error",
+								  "data":null,
+								 "message": "Aborded server'"
+								};
+				});
 
 			}else{
 				responseapi={
@@ -59,7 +67,7 @@ export default ({ config, db }) => resource({
 		}if(currency=="eth"){
 			if(address.length==42){
 				let etherString;
-				provider.getBalance(address).then(function(balance) {
+				provider.getBalance(address).then((balance) => {
 
 				    // balance is a BigNumber (in wei); format is as a sting (in ether)
 				    etherString = ethers.utils.formatEther(balance);
@@ -72,6 +80,13 @@ export default ({ config, db }) => resource({
 
 								};
 
+				}).catch((error) => {
+					console.log(error);
+					responseapi={
+								  "status": "Error",
+								  "data":null,
+								 "message": "Aborded server'"
+								};
 				});
 			}else{
 				responseapi={

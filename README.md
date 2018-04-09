@@ -74,7 +74,7 @@ Request:POST
 
     param:(required object JSON)
     privatkey:privateKey of the source ETH address
-    from:destination is the ETH destination address
+    destination:the ETH/BTC destination address
     amount:amount the number of ETH to be send
 
 
